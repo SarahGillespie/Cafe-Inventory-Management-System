@@ -1,5 +1,6 @@
 import "dotenv/config";
-import expresss from "express";
+import express from "express";
+import { config } from "./config/index.js";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { connectDB, closeDB } from "./db/connection.js";
@@ -10,14 +11,10 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
-// Middleware
-app.use(express.json());
-app.use(express.static("public"));
-
 /* Middleware */
-app.use(expresss.json());
-app.use(expresss.urlencoded({ extended: true }));
-app.use(expresss.static(join(__dirname, "..", "public")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(join(__dirname, "..", "public")));
 
 /* API Routes */
 app.use("/api/menu", menuRoutes);
@@ -26,8 +23,8 @@ app.use("/api/menu", menuRoutes);
 async function startServer() {
   try {
     await connectDB();
-    app.listen(PORT, () => {
-      console.log(`Server is running on localhost:${PORT}`);
+    app.listen(config.port, () => {
+      console.log(`Server is running on localhost:${config.port}`);
     });
   } catch (error) {
     console.error("Failed to start server:", error);

@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import config from "../config/index.js";
+import { config } from "../config/index.js";
 
 let client = null;
 let db = null;
@@ -18,7 +18,9 @@ async function connectDB() {
   client = new MongoClient(config.mongoUri);
   await client.connect();
   db = client.db(config.dbName);
-  console.log(`Connected to MongoDB successfully. Database name: ${db}`);
+  console.log(
+    `Connected to MongoDB successfully. Database name: ${db.databaseName}`,
+  );
   return db;
 }
 
