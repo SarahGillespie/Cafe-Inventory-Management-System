@@ -1,9 +1,9 @@
 {
   "_id": "ObjectId",
-  "item_name": "Oat Milk",
+  "record_type": "restock",
+  "inventory_id": "inventory._id",
   "initial_amount": 12,
   "current_amount": 6,
-  "unit": "liters",
   "expiration_date": "2025-03-01T...",
   "total_cost": 48.0,
   "date_modified": "2025-02-17T...",
