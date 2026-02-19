@@ -623,11 +623,7 @@ function renderInventory() {
         .join("")
     : `<tr><td colspan="7" class="text-center text-muted py-5"><i class="bi bi-box-seam fs-1 d-block mb-2 opacity-25"></i>No inventory records found.</td></tr>`;
 
-  // Pad with empty rows to keep consistent table height
-  const emptyRowsNeeded = list.length > 0 ? PAGE_SIZE - list.length : 0;
-  const emptyRows = Array(emptyRowsNeeded)
-    .fill('<tr><td colspan="7">&nbsp;</td></tr>')
-    .join("");
+
 
   mainContainer.innerHTML = `
     <div class="mb-4">
@@ -699,7 +695,7 @@ function renderInventory() {
               <th style="width:130px">Actions</th>
             </tr>
           </thead>
-          <tbody>${rows}${emptyRows}</tbody>
+          <tbody>${rows}</tbody>
         </table>
       </div>
     </div>
