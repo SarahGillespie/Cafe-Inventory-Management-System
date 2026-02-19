@@ -22,16 +22,15 @@ A full-stack web application that helps small and medium-sized cafe owners digit
 
 ### Inventory Management (Hsin-Yao Huang / Amy)
 
-- **Inventory Tracker** — Track ingredients with batch-level granularity
-  - Ingredient sidebar with search and stock status filter
-  - Add, edit, and delete inventory batches
-  - Record usage to decrease stock quantities
-  - Automatic stock status tracking (in stock / low / out)
-- **Inventory Analytics** — Visualize spending and restock patterns
-  - Monthly bar chart with cost, quantity, or restock count metrics
-  - Filter by specific ingredient
-  - Summary cards for total spent, quantity, restocks, and average cost
-  - Recent restocks table with last 20 records
+- **Ingredient Management** — Manage ingredient items (CRUD)
+  - Search by ingredient name
+  - Filter by stock status
+  - Click ingredient to filter inventory list
+- **Inventory Tracker** — Manage inventory items for each ingredients (CRUD)
+  - Paginated list of inventory items sorted by creation date
+  - Track the freshness and quantity of each inventory item
+  - Filter by freshness and added date
+- **Inventory Analytics** — Summary cards (total spent, restocks, quantity, ingredients) for the current filtered inventory view
 
 ## Tech Stack
 
@@ -49,16 +48,14 @@ A full-stack web application that helps small and medium-sized cafe owners digit
 │   ├── index.html                  # Redirect to menu
 │   ├── menu.html                   # Live Menu page
 │   ├── menu-archive.html           # Menu Archive page
-│   ├── inventory.html              # Inventory Tracker page
-│   ├── inventory-analytics.html    # Analytics page
+│   ├── inventory.html              # Inventory page (ingredients + batches + analytics)
 │   ├── scripts/
 │   │   ├── menu.js                 # Menu frontend logic
-│   │   ├── inventory.js            # Inventory frontend logic
-│   │   └── analytics.js            # Analytics frontend logic
+│   │   └── inventory.js            # Inventory frontend logic
 │   └── styles/
-│       ├── menu.css
-│       ├── inventory.css
-│       └── analytics.css
+│       ├── main.css                # Shared styles
+│       ├── menu.css                # Menu-specific styles
+│       └── inventory.css           # Inventory-specific styles
 ├── src/
 │   ├── config/index.js             # App configuration
 │   ├── db/connection.js            # MongoDB connection
