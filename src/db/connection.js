@@ -1,4 +1,6 @@
 import { MongoClient } from "mongodb";
+import { config } from "../config/index.js";
+import { logger } from "../utils/logger.js";
 
 let client = null;
 let db = null;
@@ -8,17 +10,16 @@ async function connectDB() {
     return db;
   }
 
-  const uri = process.env.MONGODB_URI;
-  if (!uri) {
+  if (!config.mongoUri) {
     throw new Error(
       "MONGODB_URI is not defined. Please set it in your .env file.",
     );
   }
 
-  client = new MongoClient(uri);
+  client = new MongoClient(config.mongoUri);
   await client.connect();
-  db = client.db("cafe_inventory");
-  console.log("Connected to MongoDB successfully.");
+  db = client.db(config.dbName);
+  logger.info(`[MongoDB] Connected — database: ${db.databaseName}`);
   return db;
 }
 
@@ -34,7 +35,7 @@ async function closeDB() {
     await client.close();
     client = null;
     db = null;
-    console.log("MongoDB connection closed.");
+    logger.info("[MongoDB] Connection closed.");
   }
 }
 
