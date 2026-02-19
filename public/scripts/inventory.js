@@ -623,8 +623,6 @@ function renderInventory() {
         .join("")
     : `<tr><td colspan="7" class="text-center text-muted py-5"><i class="bi bi-box-seam fs-1 d-block mb-2 opacity-25"></i>No inventory records found.</td></tr>`;
 
-
-
   mainContainer.innerHTML = `
     <div class="mb-4">
       <h2 class="fw-bold mb-1">Inventory</h2>

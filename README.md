@@ -35,12 +35,12 @@ A full-stack web application that helps small and medium-sized cafe owners digit
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Frontend** | HTML5, Bootstrap 5, Bootstrap Icons, Vanilla JavaScript (ES Modules) |
-| **Backend** | Node.js, Express.js (ESM) |
-| **Database** | MongoDB Atlas (cloud-hosted) |
-| **Deployment** | Render (Web Service) |
+| Layer          | Technology                                                           |
+| -------------- | -------------------------------------------------------------------- |
+| **Frontend**   | HTML5, Bootstrap 5, Bootstrap Icons, Vanilla JavaScript (ES Modules) |
+| **Backend**    | Node.js, Express.js (ESM)                                            |
+| **Database**   | MongoDB Atlas (cloud-hosted)                                         |
+| **Deployment** | Render (Web Service)                                                 |
 
 ## Project Structure
 
@@ -122,37 +122,37 @@ Uses `nodemon` for auto-restart on file changes.
 
 ### Menu (`/api/menu`)
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/menu` | Get all active menu items |
-| GET | `/api/menu/archive` | Get all archived items |
-| GET | `/api/menu/:id` | Get single item by ID |
-| POST | `/api/menu` | Create new menu item |
-| PUT | `/api/menu/:id` | Update menu item |
-| PUT | `/api/menu/:id/archive` | Archive (soft delete) item |
-| PUT | `/api/menu/:id/restore` | Restore archived item |
-| DELETE | `/api/menu/:id` | Permanently delete item |
+| Method | Endpoint                | Description                |
+| ------ | ----------------------- | -------------------------- |
+| GET    | `/api/menu`             | Get all active menu items  |
+| GET    | `/api/menu/archive`     | Get all archived items     |
+| GET    | `/api/menu/:id`         | Get single item by ID      |
+| POST   | `/api/menu`             | Create new menu item       |
+| PUT    | `/api/menu/:id`         | Update menu item           |
+| PUT    | `/api/menu/:id/archive` | Archive (soft delete) item |
+| PUT    | `/api/menu/:id/restore` | Restore archived item      |
+| DELETE | `/api/menu/:id`         | Permanently delete item    |
 
 ### Inventory (`/api/inventory`)
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/inventory` | Get all inventory batches with ingredient info |
-| POST | `/api/inventory` | Add new inventory batch |
-| PUT | `/api/inventory/:id` | Update inventory batch |
-| PATCH | `/api/inventory/:id/use` | Decrease quantity (staff use) |
-| DELETE | `/api/inventory/:id` | Delete inventory batch |
-| GET | `/api/inventory/ingredients` | Get all ingredients |
-| POST | `/api/inventory/ingredients` | Create new ingredient |
-| PUT | `/api/inventory/ingredients/:id` | Update ingredient |
-| DELETE | `/api/inventory/ingredients/:id` | Delete ingredient and its batches |
+| Method | Endpoint                         | Description                                    |
+| ------ | -------------------------------- | ---------------------------------------------- |
+| GET    | `/api/inventory`                 | Get all inventory batches with ingredient info |
+| POST   | `/api/inventory`                 | Add new inventory batch                        |
+| PUT    | `/api/inventory/:id`             | Update inventory batch                         |
+| PATCH  | `/api/inventory/:id/use`         | Decrease quantity (staff use)                  |
+| DELETE | `/api/inventory/:id`             | Delete inventory batch                         |
+| GET    | `/api/inventory/ingredients`     | Get all ingredients                            |
+| POST   | `/api/inventory/ingredients`     | Create new ingredient                          |
+| PUT    | `/api/inventory/ingredients/:id` | Update ingredient                              |
+| DELETE | `/api/inventory/ingredients/:id` | Delete ingredient and its batches              |
 
 ## Team
 
-| Member | Responsibility |
-|--------|----------------|
-| **Pangta Huang** | Menu Management, Analytics, Deployment |
-| **Hsin-Yao Huang (Amy)** | Inventory Management |
+| Member                   | Responsibility                         |
+| ------------------------ | -------------------------------------- |
+| **Pangta Huang**         | Menu Management, Analytics, Deployment |
+| **Hsin-Yao Huang (Amy)** | Inventory Management                   |
 
 ## License
 
