@@ -6,7 +6,7 @@ A full-stack web application that helps small and medium-sized cafe owners digit
 
 <table>
   <tr>
-    <td align="center"><strong>Home</strong><br><img src="images/thumnail.png" width="400"></td>
+    <td align="center"><strong>Home</strong><br><img src="images/demo-index.png" width="400"></td>
     <td align="center"><strong>Live Menu</strong><br><img src="images/demo-menu.png" width="400"></td>
   </tr>
   <tr>
